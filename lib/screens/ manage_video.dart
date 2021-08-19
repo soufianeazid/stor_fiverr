@@ -31,6 +31,7 @@ class _ManageVideoState extends State<ManageVideo> {
           ),
         ),
         body: SingleChildScrollView(
+          //scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -65,7 +66,7 @@ class _ManageVideoState extends State<ManageVideo> {
               SizedBox(
                 height: 22.h,
               ),
-              //CustomGridViwe()
+              CustomGridViwe()
             ],
           ),
         ),

@@ -12,6 +12,7 @@ class Style {
   static final Color primaryLightColor = Color(0xFFFFE1E5);
   static final Color headlineColor = Color(0xFF2F2F2F);
   static final Color grey4Color = Color(0xFFBDBDBD);
+  static final Color black25 = Colors.black.withOpacity(0.25);
 
 //textStyle
   static TextStyle headingText = TextStyle(
@@ -40,7 +41,7 @@ class Style {
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
   );
-  static TextStyle whiteButtonText=TextStyle(
+  static TextStyle whiteButtonText = TextStyle(
     fontFamily: 'karla',
     color: Color(0xFF717171),
     fontSize: 16.sp,
@@ -64,5 +65,22 @@ class Style {
     fontSize: 15.sp,
     fontWeight: FontWeight.w400,
   );
-
+  static TextStyle smallText = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFF717171),
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle smallWhiteText = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle prodName = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w700,
+  );
 }
