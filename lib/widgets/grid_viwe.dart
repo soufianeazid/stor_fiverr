@@ -18,6 +18,7 @@ class _CustomGridViweState extends State<CustomGridViwe> {
         height: 600,
         width: double.infinity,
         child: StaggeredGridView.countBuilder(
+          physics: const NeverScrollableScrollPhysics(),
           crossAxisCount: 4,
           itemCount: 10,
           itemBuilder: (BuildContext context, int index) => GridCuntent(),

@@ -12,20 +12,43 @@ class Style {
   static final Color primaryLightColor = Color(0xFFFFE1E5);
   static final Color headlineColor = Color(0xFF2F2F2F);
   static final Color grey4Color = Color(0xFFBDBDBD);
+//<<<<<<< HEAD
   static final Color black25 = Colors.black.withOpacity(0.25);
+//=======
+  static final Color pinkColor = Color(0xFFFFD9DE);
+//>>>>>>> 34e7030ed63b10f735e268dc8d6f3304fa903dab
 
 //textStyle
   static TextStyle headingText = TextStyle(
     fontFamily: 'karla',
     color: Colors.black,
-    fontSize: 20.sp,
+    fontSize: 25.sp,
     fontWeight: FontWeight.w700,
   );
   static TextStyle headingTextDark = TextStyle(
     fontFamily: 'karla',
     color: Colors.white,
+    fontSize: 25.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle listExpandedstyle = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle listExpandedstyledark = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle logoutText = TextStyle(
+    fontFamily: 'karla',
+    color: primaryColor,
     fontSize: 20.sp,
     fontWeight: FontWeight.w700,
+    // decoration: TextDecoration.underline,
   );
 
   static TextStyle descreption = TextStyle(
@@ -65,6 +88,7 @@ class Style {
     fontSize: 15.sp,
     fontWeight: FontWeight.w400,
   );
+//<<<<<<< HEAD
   static TextStyle smallText = TextStyle(
     fontFamily: 'karla',
     color: Color(0xFF717171),
@@ -83,4 +107,6 @@ class Style {
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
   );
+//=======
+//>>>>>>> 34e7030ed63b10f735e268dc8d6f3304fa903dab
 }
