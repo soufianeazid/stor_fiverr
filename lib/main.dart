@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/screens/%20manage_video.dart';
 
-
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()); //xx
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           home: ManageVideo()),
-           designSize: const Size(375, 812),
+      designSize: const Size(375, 812),
     );
   }
 }
