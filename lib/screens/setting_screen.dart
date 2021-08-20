@@ -4,6 +4,7 @@ import 'package:flutter_stor/main.dart';
 import 'package:flutter_stor/util/save.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stor/widgets/custom_list_tile.dart';
 import 'package:flutter_stor/widgets/expandable_list.dart';
 import 'package:flutter_stor/util/switchmsrou9a.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -50,7 +51,16 @@ class _SettingScreenState extends State<SettingScreen> {
               icon: Icons.notifications_none,
               name: 'Push Notification',
               wlidat: [
-                
+                Column(
+                  children: [
+                    CustomListTile(name: 'My Video Adverts',),
+                    CustomListTile(name: 'Chat Messages'),
+                    CustomListTile(name: 'Adlynck Highlights'),
+                    CustomListTile(name: 'News And Recommendations'),
+                    CustomListTile(name: 'SMS Info Notification'),
+                    CustomListTile(name: 'Feedback'),
+                  ],
+                )
               ],
             ),
             ExpandableList(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class ExpandableList extends StatefulWidget {
   List<Widget>? wlidat;
@@ -20,8 +22,8 @@ class _ExpandableListState extends State<ExpandableList> {
     var provider = context.watch<Themeprov>();
     return ExpansionTile(
       leading: Container(
-        width: 32,
-        height: 32,
+        width: 32.w,
+        height: 32.h,
         decoration: BoxDecoration(
           color: Style.pinkColor,
           borderRadius: BorderRadius.circular(8),
@@ -49,7 +51,7 @@ class _ExpandableListState extends State<ExpandableList> {
         Container(
           color: provider.mymode ? Colors.black : Colors.white,
           width: double.infinity,
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,

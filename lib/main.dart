@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/provider_setup.dart';
-import 'package:flutter_stor/screens/%20manage_video.dart';
-import 'package:flutter_stor/screens/setting_screen.dart';
+import 'package:flutter_stor/screens/log_in.dart';
+import 'package:flutter_stor/screens/login_or_logup.dart';
+import 'package:flutter_stor/screens/log_up.dart';
+import 'package:flutter_stor/screens/phone_verfy.dart';
 import 'package:flutter_stor/util/save.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -39,7 +41,7 @@ class _MyAppState extends State<MyApp> {
             primarySwatch: Colors.blue,
           ),
           debugShowCheckedModeBanner: false,
-          home: SettingScreen(),
+          home: PhoneVerfy(),
         ),
         designSize: const Size(375, 812),
       ),

@@ -6,7 +6,7 @@ class Style {
   static final Color blackColor = Colors.black;
   static final Color whiteColor = Colors.white;
   static final Color greyColor = Color(0xFFBBBABA);
-  static final Color blueColor = Color(0xFF2D9CDB);
+  static final Color blueColor = Color(0xFF137AEF);
   static final Color primaryColor = Color(0xFFFF3E57);
   static final Color greenColor = Color(0xFF82CA9A);
   static final Color primaryLightColor = Color(0xFFFFE1E5);
@@ -29,6 +29,18 @@ class Style {
     fontFamily: 'karla',
     color: Colors.white,
     fontSize: 25.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle headingTextDark1 = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle body = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFF717171),
+    fontSize: 24.sp,
     fontWeight: FontWeight.w700,
   );
   static TextStyle listExpandedstyle = TextStyle(
@@ -63,6 +75,12 @@ class Style {
     color: Colors.white,
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
+  );
+  static TextStyle buttonText2 = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
   );
   static TextStyle whiteButtonText = TextStyle(
     fontFamily: 'karla',
@@ -107,6 +125,38 @@ class Style {
     fontSize: 14.sp,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle hinttext = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFFBBBABA),
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+static TextStyle white24 = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle grey24 = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFFBBBABA),
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+static TextStyle dark15 = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700);
+
+  static TextStyle leghit15 = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.black,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700);
+
 //=======
 //>>>>>>> 34e7030ed63b10f735e268dc8d6f3304fa903dab
 }
