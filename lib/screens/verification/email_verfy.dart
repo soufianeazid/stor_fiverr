@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,14 +8,14 @@ import 'package:flutter_stor/widgets/custom_text_field.dart';
 import 'package:flutter_stor/widgets/otp.dart';
 import 'package:provider/provider.dart';
 
-class PhoneVerfy extends StatefulWidget {
-  const PhoneVerfy({Key? key}) : super(key: key);
+class EmailVerfy extends StatefulWidget {
+  const EmailVerfy({Key? key}) : super(key: key);
 
   @override
-  _PhoneVerfyState createState() => _PhoneVerfyState();
+  _EmailVerfyState createState() => _EmailVerfyState();
 }
 
-class _PhoneVerfyState extends State<PhoneVerfy> {
+class _EmailVerfyState extends State<EmailVerfy> {
   @override
   Widget build(BuildContext context) {
     var provider = context.watch<Themeprov>();
@@ -59,7 +60,7 @@ class _PhoneVerfyState extends State<PhoneVerfy> {
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    'Enter the 4-digit code we sent to your phone',
+                    'Enter the confirmation code we sent to ',
                     style: provider.mymode ? Style.dark15 : Style.leghit15,
                   ),
                   Row(
@@ -67,31 +68,10 @@ class _PhoneVerfyState extends State<PhoneVerfy> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'number.',
+                        'ellaminaa@gmail.com.',
                         style: provider.mymode ? Style.dark15 : Style.leghit15,
                       ),
-                      TextButton(
-                          onPressed: () {}, child: Text('Request a new one'))
-                    ],
-                  ),
-                  SizedBox(
-                    height: 0.h,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '+233556976151',
-                        style: provider.mymode
-                            ? Style.listExpandedstyledark
-                            : Style.listExpandedstyle,
-                      ),
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.mode_edit,
-                            color: Style.blueColor,
-                          ))
+                      TextButton(onPressed: () {}, child: Text('Resend Code'))
                     ],
                   ),
                   SizedBox(
@@ -116,7 +96,26 @@ class _PhoneVerfyState extends State<PhoneVerfy> {
                         Otp(),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 50.h,
+                  ),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(90),
+                    onTap: () {},
+                    child: Container(
+                      height: 46.h,
+                      width: 257.w,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(90),
+                          color: Style.primaryColor),
+                      child: Center(
+                          child: Text(
+                        'Submit',
+                        style: Style.buttonText,
+                      )),
+                    ),
+                  ),
                 ],
               ),
             ],

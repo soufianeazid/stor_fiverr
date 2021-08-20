@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/provider_setup.dart';
-import 'package:flutter_stor/screens/log_in.dart';
-import 'package:flutter_stor/screens/login_or_logup.dart';
-import 'package:flutter_stor/screens/log_up.dart';
-import 'package:flutter_stor/screens/phone_verfy.dart';
+import 'package:flutter_stor/screens/log/log_in.dart';
+import 'package:flutter_stor/screens/log/login_or_logup.dart';
+import 'package:flutter_stor/screens/log/log_up.dart';
+import 'package:flutter_stor/screens/pages/home.dart';
+import 'package:flutter_stor/screens/pages/my_home_page.dart';
+import 'package:flutter_stor/screens/verification/email_verfy.dart';
+import 'package:flutter_stor/screens/verification/phone_verfy.dart';
+import 'package:flutter_stor/screens/reset_pass/new_pass.dart';
+import 'package:flutter_stor/screens/reset_pass/rest_pass.dart';
 import 'package:flutter_stor/util/save.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -41,7 +46,7 @@ class _MyAppState extends State<MyApp> {
             primarySwatch: Colors.blue,
           ),
           debugShowCheckedModeBanner: false,
-          home: PhoneVerfy(),
+          home: MyHomePage(),
         ),
         designSize: const Size(375, 812),
       ),

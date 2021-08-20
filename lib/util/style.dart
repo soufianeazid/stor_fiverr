@@ -12,6 +12,11 @@ class Style {
   static final Color primaryLightColor = Color(0xFFFFE1E5);
   static final Color headlineColor = Color(0xFF2F2F2F);
   static final Color grey4Color = Color(0xFFBDBDBD);
+  static final Color k7aljdid = Color(0xFF242832);
+  static final Color grey6 = Color(0xFFF2F2F2);
+  static final Color grey =Colors.grey.withOpacity(0.6);
+
+
 //<<<<<<< HEAD
   static final Color black25 = Colors.black.withOpacity(0.25);
 //=======
@@ -157,6 +162,36 @@ static TextStyle dark15 = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w700);
 
+static TextStyle blackButtonText = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle smallblack = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle pinki = TextStyle(
+    fontFamily: 'karla',
+    color:  Color(0xFFFF3E57),
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400);
+
+    static TextStyle gry = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.grey,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle whiti = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
 //=======
 //>>>>>>> 34e7030ed63b10f735e268dc8d6f3304fa903dab
 }
