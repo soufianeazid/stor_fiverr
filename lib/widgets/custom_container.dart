@@ -17,7 +17,7 @@ class CustomContainer extends StatelessWidget {
             height: 158.h,
             width: 258.w,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(24.r),
                 color: Colors.black,
                 image:
                     DecorationImage(image: AssetImage('assets/image/watch.png'),fit: BoxFit.cover)),
@@ -31,7 +31,7 @@ class CustomContainer extends StatelessWidget {
                 width: 41.w,
                 decoration: BoxDecoration(
                   color: Style.whiteColor,
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -39,7 +39,7 @@ class CustomContainer extends StatelessWidget {
                     Icon(
                       Icons.favorite,
                       color: Style.primaryColor,
-                      size: 15,
+                      size: 15.sp,
                     ),
                     Text(
                       '2.5 K',
@@ -56,7 +56,7 @@ class CustomContainer extends StatelessWidget {
                 width: 41.w,
                 decoration: BoxDecoration(
                   color: Style.blackColor.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -64,7 +64,7 @@ class CustomContainer extends StatelessWidget {
                     Icon(
                       Icons.remove_red_eye,
                       color: Style.whiteColor,
-                      size: 15,
+                      size: 15.sp,
                     ),
                     Text(
                       '2.5 K',
@@ -85,15 +85,15 @@ class CustomContainer extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Style.grey4Color,
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20))),
+                    topRight: Radius.circular(20.r),
+                    bottomLeft: Radius.circular(20.r))),
             child: Center(
                 child: IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.more_horiz,
                 color: Style.whiteColor,
-                size: 20,
+                size: 20.sp,
               ),
             )),
           ),
@@ -106,8 +106,8 @@ class CustomContainer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Style.black25,
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20))),
+                    bottomRight: Radius.circular(20.r),
+                    bottomLeft: Radius.circular(20.r))),
                     child: Column(
                       children: [
                         Text('Text prodNume',overflow: TextOverflow.ellipsis,style: Style.prodName,),

@@ -14,8 +14,8 @@ class Style {
   static final Color grey4Color = Color(0xFFBDBDBD);
   static final Color k7aljdid = Color(0xFF242832);
   static final Color grey6 = Color(0xFFF2F2F2);
-  static final Color grey =Colors.grey.withOpacity(0.6);
-
+  static final Color dark = Color(0xFF101010);
+  static final Color grey = Colors.grey.withOpacity(0.6);
 
 //<<<<<<< HEAD
   static final Color black25 = Colors.black.withOpacity(0.25);
@@ -137,7 +137,7 @@ class Style {
     fontWeight: FontWeight.w400,
   );
 
-static TextStyle white24 = TextStyle(
+  static TextStyle white24 = TextStyle(
     fontFamily: 'karla',
     color: Colors.white,
     fontSize: 24.sp,
@@ -150,24 +150,29 @@ static TextStyle white24 = TextStyle(
     fontWeight: FontWeight.w400,
   );
 
-static TextStyle dark15 = TextStyle(
-    fontFamily: 'karla',
-    color: Colors.white,
-    fontSize: 15.sp,
-    fontWeight: FontWeight.w700);
+  static TextStyle dark15 = TextStyle(
+      fontFamily: 'karla',
+      color: Colors.white,
+      fontSize: 15.sp,
+      fontWeight: FontWeight.w700);
 
   static TextStyle leghit15 = TextStyle(
-    fontFamily: 'karla',
-    color: Colors.black,
-    fontSize: 15.sp,
-    fontWeight: FontWeight.w700);
+      fontFamily: 'karla',
+      color: Colors.black,
+      fontSize: 15.sp,
+      fontWeight: FontWeight.w700);
 
-static TextStyle blackButtonText = TextStyle(
+  static TextStyle blackButtonText = TextStyle(
     fontFamily: 'karla',
     color: Colors.white,
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle blacktext = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.black,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,);
   static TextStyle smallblack = TextStyle(
     fontFamily: 'karla',
     color: Colors.black,
@@ -175,20 +180,26 @@ static TextStyle blackButtonText = TextStyle(
     fontWeight: FontWeight.w400,
   );
   static TextStyle pinki = TextStyle(
-    fontFamily: 'karla',
-    color:  Color(0xFFFF3E57),
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w400);
+      fontFamily: 'karla',
+      color: Color(0xFFFF3E57),
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400);
 
-    static TextStyle gry = TextStyle(
+  static TextStyle gry = TextStyle(
     fontFamily: 'karla',
     color: Colors.grey,
-    fontSize: 20.sp,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
   static TextStyle whiti = TextStyle(
     fontFamily: 'karla',
     color: Colors.white,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle buttontext = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFF2D9CDB),
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
   );

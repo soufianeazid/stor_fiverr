@@ -37,7 +37,7 @@ class _CustomButtonState extends State<CustomButton> {
           height: 70.h,
           width: 295.w,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(90),
+            borderRadius: BorderRadius.circular(90.r),
             color: widget.color,
           ),
           child: Padding(
@@ -47,7 +47,7 @@ class _CustomButtonState extends State<CustomButton> {
                 Icon(
                   widget.icon,
                   color: Style.whiteColor,
-                  size: 30,
+                  size: 30.sp,
                 ),
                 SizedBox(
                   width: 10.w,

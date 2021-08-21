@@ -77,13 +77,13 @@ class _NewPasswordState extends State<NewPassword> {
                 height: 26.h,
               ),
               InkWell(
-                      borderRadius: BorderRadius.circular(90),
+                      borderRadius: BorderRadius.circular(90.r),
                       onTap: () {},
                       child: Container(
                         height: 46.h,
                         width: 257.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(90),
+                            borderRadius: BorderRadius.circular(90.r),
                             color: Style.primaryColor),
                         child: Center(
                             child: Text(

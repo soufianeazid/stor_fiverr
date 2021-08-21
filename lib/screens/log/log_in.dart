@@ -104,7 +104,7 @@ class _LogInState extends State<LogIn> {
                       height: 46.h,
                       width: 257.w,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(90),
+                        borderRadius: BorderRadius.circular(90.r),
                         border: Border.all(
                           color: provider.mymode
                               ? Style.whiteColor
@@ -132,13 +132,13 @@ class _LogInState extends State<LogIn> {
                       height: 16.h,
                     ),
                     InkWell(
-                      borderRadius: BorderRadius.circular(90),
+                      borderRadius: BorderRadius.circular(90.r),
                       onTap: () {},
                       child: Container(
                         height: 46.h,
                         width: 257.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(90),
+                            borderRadius: BorderRadius.circular(90.r),
                             color: Style.primaryColor),
                         child: Center(
                             child: Text(

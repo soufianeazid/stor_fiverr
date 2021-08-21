@@ -53,8 +53,8 @@ class _CustomListTileState extends State<CustomListTile> {
 
 Widget flutterSwitch() {
   return FlutterSwitch(
-    width: 70,
-    borderRadius: 30.0,
+    width: 70.w,
+    borderRadius: 30.0.r,
     value: true,
     onToggle: (bool value) {},
   );

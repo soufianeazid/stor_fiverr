@@ -13,11 +13,11 @@ class CategoriButton extends StatelessWidget {
     return Padding(
       padding:  EdgeInsets.only(left: 20.w),
       child: Container(
-        padding: EdgeInsets.only(top: 5,left: 5,right: 5,bottom: 5),
+        padding: EdgeInsets.only(top: 5.h,left: 5.w,right: 5.w,bottom: 5.h),
           //width: 50.w,
           height: 30.h,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(5.r),
             color: Style.pinkColor,
           ),
           child: Center(
@@ -25,7 +25,7 @@ class CategoriButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
                mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(icon,size: 15,),
+                Icon(icon,size: 15.sp,),
                 SizedBox(
                   width: 10.w,
                 ),

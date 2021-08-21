@@ -11,7 +11,7 @@ class GridCuntent extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: BorderRadius.circular(24.r),
               color: Colors.black,
               image: DecorationImage(
                   image: AssetImage(
@@ -28,7 +28,7 @@ class GridCuntent extends StatelessWidget {
                 width: 41.w,
                 decoration: BoxDecoration(
                   color: Style.whiteColor,
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -36,7 +36,7 @@ class GridCuntent extends StatelessWidget {
                     Icon(
                       Icons.favorite,
                       color: Style.primaryColor,
-                      size: 15,
+                      size: 15.sp,
                     ),
                     Text(
                       '2.5 K',
@@ -53,7 +53,7 @@ class GridCuntent extends StatelessWidget {
                 width: 41.w,
                 decoration: BoxDecoration(
                   color: Style.blackColor.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(5),
+                  borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -61,7 +61,7 @@ class GridCuntent extends StatelessWidget {
                     Icon(
                       Icons.remove_red_eye,
                       color: Style.whiteColor,
-                      size: 15,
+                      size: 15.sp,
                     ),
                     Text(
                       '2.5 K',

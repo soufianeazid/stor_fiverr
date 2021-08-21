@@ -26,10 +26,10 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.only(bottom: 5.h),
               color: Colors.transparent,
               child: CustomAnimatedBottomBar(
-                containerHeight: 60,
+                containerHeight: 60.h,
                 selectedIndex: _currentIndex,
                 showElevation: true,
-                itemCornerRadius: 24,
+                itemCornerRadius: 24.r,
                 curve: Curves.easeIn,
                 onItemSelected: (index) =>
                     setState(() => _currentIndex = index),
@@ -69,23 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding:  EdgeInsets.only(bottom: 30.h),
-              child: Container(
-                height: 38.h,
-                width: 38.w,
-                decoration: BoxDecoration(
-                    color: Style.primaryColor, shape: BoxShape.circle),
-                child: Icon(
-                  Icons.add,
-                  size: 16.sp,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
+          
         ],
       ),
     );
@@ -98,21 +82,21 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment: Alignment.center,
         child: Text(
           "Users",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
         ),
       ),
       Container(
         alignment: Alignment.center,
         child: Text(
           "Messages",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
         ),
       ),
       Container(
         alignment: Alignment.center,
         child: Text(
           "Settings",
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
         ),
       ),
       Profile(),

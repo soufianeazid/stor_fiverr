@@ -59,7 +59,7 @@ class _RegesterState extends State<Regester> {
                 height: 48.h,
               ),
               InkWell(
-                borderRadius: BorderRadius.circular(90),
+                borderRadius: BorderRadius.circular(90.r),
                 onTap: () {},
                 child: CustomButton(
                   color: Style.primaryColor,
@@ -71,7 +71,7 @@ class _RegesterState extends State<Regester> {
                 height: 25.h,
               ),
               InkWell(
-                borderRadius: BorderRadius.circular(90),
+                borderRadius: BorderRadius.circular(90.r),
                 onTap: () {},
                 child: Container(
                   child: Padding(
@@ -80,7 +80,7 @@ class _RegesterState extends State<Regester> {
                       height: 70.h,
                       width: 295.w,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(90),
+                          borderRadius: BorderRadius.circular(90.r),
                           border: Border.all(
                             color: provider.mymode
                                 ? Style.whiteColor
@@ -113,7 +113,7 @@ class _RegesterState extends State<Regester> {
                 height: 25.h,
               ),
               InkWell(
-                borderRadius: BorderRadius.circular(90),
+                borderRadius: BorderRadius.circular(90.r),
                 onTap: () {},
                 child: CustomButton(
                   color: Style.blueColor,

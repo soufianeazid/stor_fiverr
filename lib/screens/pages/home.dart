@@ -20,55 +20,51 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
- 
-
- 
   @override
   Widget build(BuildContext context) {
     var provider = context.watch<Themeprov>();
     return SafeArea(
       child: Scaffold(
         backgroundColor: provider.mymode ? Colors.black : Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          title: Padding(
-            padding: EdgeInsets.only(top: 30.h),
-            child: Image.asset(
-              ('assets/image/paner_name.png'),
-              height: 30.h,
-              width: 107.w,
-            ),
-          ),
-          actions: [
-            Padding(
-              padding: EdgeInsets.only(top: 22.h),
-              child: Row(
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.search,
-                        color: provider.mymode ? Colors.white : Colors.black,
-                        size: 30,
-                      )),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.notifications_none,
-                        color: provider.mymode ? Colors.white : Colors.black,
-                        size: 30,
-                      )),
-                ],
-              ),
-            )
-          ],
-        ),
+
         body: Container(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 19.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        ('assets/image/paner_name.png'),
+                        height: 30.h,
+                        width: 107.w,
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.search,
+                                color:
+                                    provider.mymode ? Colors.white : Colors.black,
+                                size: 30.sp,
+                              )),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.notifications_none,
+                                color:
+                                    provider.mymode ? Colors.white : Colors.black,
+                                size: 30.sp,
+                              )),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
                 SizedBox(
                   height: 31.h,
                 ),
@@ -98,7 +94,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

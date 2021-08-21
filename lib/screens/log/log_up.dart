@@ -98,7 +98,7 @@ class _LogUpState extends State<LogUp> {
                   height: 46.h,
                   width: 257.w,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90),
+                      borderRadius: BorderRadius.circular(90.r),
                       color: Style.primaryColor),
                   child: Center(
                       child: Text(
@@ -153,7 +153,7 @@ class _LogUpState extends State<LogUp> {
                     height: 46.h,
                     width: 257.w,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90),
+                      borderRadius: BorderRadius.circular(90.r),
                       border: Border.all(
                         color: provider.mymode
                             ? Style.whiteColor

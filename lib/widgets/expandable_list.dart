@@ -26,7 +26,7 @@ class _ExpandableListState extends State<ExpandableList> {
         height: 32.h,
         decoration: BoxDecoration(
           color: Style.pinkColor,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
         child: Icon(
           widget.icon,

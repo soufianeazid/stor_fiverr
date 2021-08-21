@@ -4,9 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
+import 'package:flutter_stor/screens/pages/setting_screen.dart';
 import 'package:flutter_stor/widgets/categori_button.dart';
+import 'package:flutter_stor/widgets/container_dyal_profil.dart';
 import 'package:flutter_stor/widgets/custom_animation_bottom_bar.dart';
 import 'package:flutter_stor/widgets/custom_container.dart';
+import 'package:flutter_stor/widgets/custom_row.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_stor/widgets/grid_viwe.dart';
@@ -26,50 +30,56 @@ class _ProfileState extends State<Profile> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          title: Padding(
-            padding: EdgeInsets.only(top: 30.h),
-            child: Image.asset(
-              ('assets/image/paner_name.png'),
-              height: 30.h,
-              width: 107.w,
-            ),
-          ),
-          actions: [
-            Padding(
-              padding: EdgeInsets.only(top: 22.h),
-              child: Row(
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.search,
-                        color: provider.mymode ? Colors.white : Colors.black,
-                        size: 30,
-                      )),
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.notifications_none,
-                        color: provider.mymode ? Colors.white : Colors.black,
-                        size: 30,
-                      )),
-                ],
-              ),
-            )
-          ],
-        ),
-        body: SingleChildScrollView(
-          child: Container(
-            child: Column(
+        backgroundColor: provider.mymode ? Style.dark : Colors.white,
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 50.h,
+                 SizedBox(
+                  height: 19.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 155.w),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        ('assets/image/paner_name.png'),
+                        height: 30.h,
+                        width: 107.w,
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.search,
+                                color: provider.mymode
+                                    ? Colors.white
+                                    : Colors.black,
+                                size: 30.sp,
+                              )),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.notifications_none,
+                                color: provider.mymode
+                                    ? Colors.white
+                                    : Colors.black,
+                                size: 30.sp,
+                              )),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 30.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 150.w),
                   child: Image.asset(
                     'assets/image/photo_profile.png',
                     height: 64.h,
@@ -79,11 +89,14 @@ class _ProfileState extends State<Profile> {
                 SizedBox(
                   height: 14.h,
                 ),
-                Text(
-                  'Ann Stanton',
-                  style: provider.mymode
-                      ? Style.listExpandedstyledark
-                      : Style.listExpandedstyle,
+                Padding(
+                  padding: EdgeInsets.only(left: 150.w),
+                  child: Text(
+                    'Ann Stanton',
+                    style: provider.mymode
+                        ? Style.listExpandedstyledark
+                        : Style.listExpandedstyle,
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -106,16 +119,20 @@ class _ProfileState extends State<Profile> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
+                      onTap: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EditProfil()));},
                       child: Container(
                         height: 35.h,
                         width: 97.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(15.r),
                             color: provider.mymode ? Style.grey : Style.grey6),
                         child: Center(
                             child: Text(
                           'Edit Profile',
-                          style:provider.mymode ? Style.whiti : Style.gry,
+                          style: provider.mymode ? Style.whiti : Style.gry,
                         )),
                       ),
                     ),
@@ -123,20 +140,165 @@ class _ProfileState extends State<Profile> {
                       width: 5.w,
                     ),
                     InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SettingScreen()));
+                      },
                       child: Container(
                         height: 30.h,
                         width: 30.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(15.r),
                             color: provider.mymode ? Style.grey : Style.grey6),
-                        child: Center(child: Icon(Icons.settings,color:  provider.mymode ? Style.whiteColor : Style.blackColor,)),
+                        child: Center(
+                            child: Icon(
+                          Icons.settings,
+                          color: provider.mymode
+                              ? Style.whiteColor
+                              : Style.blackColor,
+                        )),
                       ),
-                    )
+                    ),
                   ],
+                ),
+                SizedBox(
+                  height: 21.h,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 20.w),
+                  child: Text(
+                    'Seller Bio',
+                    style: provider.mymode
+                        ? Style.listExpandedstyledark
+                        : Style.listExpandedstyle,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 13.w),
+                  child: Text(
+                    'Hey there Adlynck community, I am a good seller and I\nsell good and quality products. Just DM!',
+                    style: provider.mymode ? Style.whiti : Style.gry,
+                  ),
+                ),
+                SizedBox(
+                  height: 26.h,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      onTap: (){},
+                      child: ProfileCuntent(
+                        image: provider.mymode
+                            ? 'assets/image/dark_vid.png'
+                            : 'assets/image/light_vid.png',
+                        text: 'Video Adverts 20',
+                      ),
+                    ),
+                    SizedBox(
+                width: 20.w,
+                ),
+                    InkWell(
+                      onTap: (){},
+                      child: ProfileCuntent(
+                        image: 'assets/image/Vector-4.png',
+                        text: 'Requested 05',
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 23.h, left: 20.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Links',
+                        style: provider.mymode
+                            ? Style.listExpandedstyledark
+                            : Style.listExpandedstyle,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: CustomRowButton(
+                          image: 'assets/icon/facebook.png',
+                          text: 'facebook',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: CustomRowButton(
+                          image: 'assets/icon/instagram.png',
+                          text: 'instagram',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: CustomRowButton(
+                          image: 'assets/icon/pinterest.png',
+                          text: 'pinterest',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: CustomRowButton(
+                          image: 'assets/icon/Group-4.png',
+                          text: 'We Heart It',
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 20.h),
+                        child: Text(
+                          'More Info',
+                          style: provider.mymode
+                              ? Style.listExpandedstyledark
+                              : Style.listExpandedstyle,
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: CustomRowButton(
+                          image: provider.mymode
+                              ? 'assets/icon/globe.png'
+                              : 'assets/icon/globe_black.png',
+                          text: 'http://www.website.com',
+                        ),
+                      ),
+                      CustomRow(
+                        image: provider.mymode
+                            ? 'assets/icon/place.png'
+                            : 'assets/icon/place_black.png',
+                        text: 'Greater Accra',
+                      ),
+                      CustomRow(
+                        image: provider.mymode
+                            ? 'assets/icon/info.png'
+                            : 'assets/icon/info_black.png',
+                        text: 'Joined Aug 11, 2021',
+                      ),
+                      CustomRow(
+                        image: provider.mymode
+                            ? 'assets/icon/eye.png'
+                            : 'assets/icon/eye-black.png',
+                        text: '204,545,645 views',
+                      ),
+                      CustomRow(
+                        image: provider.mymode
+                            ? 'assets/icon/star.png'
+                            : 'assets/icon/star_black.png',
+                        text: '232,345,343 Stars',
+                      ),
+                      SizedBox(
+                        height: 100.h,
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
-          ),
+          ],
         ),
       ),
     );

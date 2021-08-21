@@ -77,13 +77,13 @@ class _ResetPasswordState extends State<ResetPassword> {
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: 59.w),
               child: InkWell(
-                borderRadius: BorderRadius.circular(90),
+                borderRadius: BorderRadius.circular(90.r),
                 onTap: () {},
                 child: Container(
                   height: 46.h,
                   width: 257.w,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90),
+                      borderRadius: BorderRadius.circular(90.r),
                       color: Style.primaryColor),
                   child: Center(
                       child: Text(

@@ -27,7 +27,7 @@ class CustomTExtField extends StatelessWidget {
           decoration: InputDecoration(
             prefixIcon: Icon(
               icon,
-              size: 30,
+              size: 30.sp,
               color: provider.mymode ? Style.whiteColor : Style.grey4Color,
             ),
             hintText: text,

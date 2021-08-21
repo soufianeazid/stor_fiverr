@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/main.dart';
+import 'package:flutter_stor/screens/pages/my_home_page.dart';
+import 'package:flutter_stor/screens/pages/profile.dart';
 import 'package:flutter_stor/util/save.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +34,10 @@ class _SettingScreenState extends State<SettingScreen> {
             color: provider.mymode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+           Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyHomePage()));
           },
         ),
         title: Text(

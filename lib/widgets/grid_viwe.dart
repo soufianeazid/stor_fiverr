@@ -15,7 +15,7 @@ class _CustomGridViweState extends State<CustomGridViwe> {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 22.w),
       child: Container(
-        height: 600,
+        height: 600.h,
         width: double.infinity,
         child: StaggeredGridView.countBuilder(
           physics: const NeverScrollableScrollPhysics(),

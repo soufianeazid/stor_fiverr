@@ -78,7 +78,7 @@ class _EmailVerfyState extends State<EmailVerfy> {
                     height: 10.h,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 50),
+                    padding: EdgeInsets.symmetric(horizontal: 50.r),
                     child: Row(
                       children: [
                         Otp(),
@@ -101,13 +101,13 @@ class _EmailVerfyState extends State<EmailVerfy> {
                     height: 50.h,
                   ),
                   InkWell(
-                    borderRadius: BorderRadius.circular(90),
+                    borderRadius: BorderRadius.circular(90.r),
                     onTap: () {},
                     child: Container(
                       height: 46.h,
                       width: 257.w,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(90),
+                          borderRadius: BorderRadius.circular(90.r),
                           color: Style.primaryColor),
                       child: Center(
                           child: Text(

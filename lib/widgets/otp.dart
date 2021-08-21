@@ -32,7 +32,7 @@ class _OtpState extends State<Otp> {
           showCursor: false,
           readOnly: false,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
           keyboardType: TextInputType.number,
           maxLength: 1,
           decoration: InputDecoration(

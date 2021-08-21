@@ -53,7 +53,7 @@ class CustomAnimatedBottomBar extends StatelessWidget {
               height: 58.h,
               padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 8.w),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(15.r),
                 color: provider.mymode ? Style.k7aljdid : Style.whiteColor,
                 boxShadow: [
                   if (showElevation)
@@ -80,6 +80,23 @@ class CustomAnimatedBottomBar extends StatelessWidget {
                     ),
                   );
                 }).toList(),
+              ),
+            ),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal:138.w,vertical:9.h ),
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                    height: 38.h,
+                    width: 38.w,
+                    decoration: BoxDecoration(
+                        color: Style.primaryColor, shape: BoxShape.circle),
+                    child: Icon(
+                      Icons.add,
+                      size: 16.sp,
+                      color: Colors.white,
+                    ),
+                  ),
               ),
             ),
            
