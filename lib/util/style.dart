@@ -94,6 +94,19 @@ class Style {
     fontSize: 20.sp,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle g1 = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFF3D3D3D),
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+    
+  );
+  static TextStyle g2 = TextStyle(
+    fontFamily: 'karla',
+    color: Color(0xFFD4D4D4),
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+  );
   static TextStyle grey20 = TextStyle(
     fontFamily: 'karla',
     color: Style.bpdy,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/util/style.dart';
-import 'package:flutter_stor/widgets/grid_cuntent.dart';
+import 'package:flutter_stor/widgets/grid_viwe_cuntent.dart';
 
 class CustomGridViwe extends StatefulWidget {
   const CustomGridViwe({Key? key}) : super(key: key);

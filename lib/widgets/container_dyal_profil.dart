@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter_stor/screens/pages/setting_screen.dart';
-import 'package:flutter_stor/widgets/categori_button.dart';
-import 'package:flutter_stor/widgets/custom_animation_bottom_bar.dart';
-import 'package:flutter_stor/widgets/custom_container.dart';
-import 'package:flutter_stor/widgets/custom_text_field.dart';
 import 'package:flutter_stor/util/style.dart';
-import 'package:flutter_stor/widgets/grid_viwe.dart';
 import 'package:provider/provider.dart';
 
 class ProfileCuntent extends StatefulWidget {

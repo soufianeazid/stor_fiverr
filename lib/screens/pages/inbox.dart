@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/conversation.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
-import 'package:flutter_stor/widgets/categori_button.dart';
 import 'package:flutter_stor/widgets/conversation.dart';
-import 'package:flutter_stor/widgets/custom_container.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
-import 'package:flutter_stor/widgets/grid_viwe.dart';
 import 'package:provider/provider.dart';
 
 class Inbox extends StatefulWidget {
@@ -88,7 +86,12 @@ class _InboxState extends State<Inbox> {
                     height: 23.h,
                   ),
                   InkWell(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Conver()));
+                    },
                     child: Conversation(
                       image: 'assets/image/Rectangle 156.png',
                       name: 'Kaiya Mango',
@@ -99,7 +102,12 @@ class _InboxState extends State<Inbox> {
                     ),
                   ),
                   InkWell(
-                     onTap: (){},
+                     onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Conver()));
+                     },
                     child: Conversation(
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',
@@ -110,7 +118,12 @@ class _InboxState extends State<Inbox> {
                     ),
                   ),
                   InkWell(
-                     onTap: (){},
+                     onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Conver()));
+                     },
                     child: Conversation(
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',
@@ -121,7 +134,12 @@ class _InboxState extends State<Inbox> {
                     ),
                   ),
                   InkWell(
-                    onTap: (){},
+                    onTap: (){
+                       Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Conver()));
+                    },
                     child: Conversation(
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',

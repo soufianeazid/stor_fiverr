@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
-import 'package:flutter_stor/util/style.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_stor/widgets/custom_expandable.dart';
-import 'package:flutter_stor/widgets/custom_list_tile.dart';
-import 'package:flutter_stor/widgets/custom_text_field.dart';
-import 'package:flutter_stor/widgets/expandable_list.dart';
-import 'package:flutter_stor/util/switchmsrou9a.dart';
 import 'package:provider/provider.dart';
 class Otp extends StatefulWidget {
   bool? first;

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/notification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/widgets/categori_button.dart';
-import 'package:flutter_stor/widgets/custom_container.dart';
+import 'package:flutter_stor/widgets/video_adverts.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_stor/widgets/grid_viwe.dart';
 import 'package:provider/provider.dart';
@@ -52,7 +53,12 @@ class _HomeState extends State<Home> {
                               size: 30.sp,
                             )),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Notifications()));
+                            },
                             icon: Icon(
                               Icons.notifications_none,
                               color:
