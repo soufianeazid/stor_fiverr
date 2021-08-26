@@ -16,11 +16,15 @@ class CustomButton extends StatefulWidget {
   String? text = '';
   Color? color;
 
-  IconData? icon;
-  
+  Widget? icon;
 
-  CustomButton({Key? key, this.color, this.icon, this.text, colors, })
-      : super(key: key);
+  CustomButton({
+    Key? key,
+    this.color,
+    this.icon,
+    this.text,
+    colors,
+  }) : super(key: key);
 
   @override
   _CustomButtonState createState() => _CustomButtonState();
@@ -30,7 +34,6 @@ class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 40.w),
         child: Container(
@@ -44,11 +47,7 @@ class _CustomButtonState extends State<CustomButton> {
             padding: EdgeInsets.only(left: 24.w),
             child: Row(
               children: [
-                Icon(
-                  widget.icon,
-                  color: Style.whiteColor,
-                  size: 30.sp,
-                ),
+                widget.icon!,
                 SizedBox(
                   width: 10.w,
                 ),

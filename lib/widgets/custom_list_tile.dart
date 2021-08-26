@@ -56,6 +56,8 @@ Widget flutterSwitch() {
     width: 70.w,
     borderRadius: 30.0.r,
     value: true,
-    onToggle: (bool value) {},
+    onToggle: (bool value) {
+      
+    },
   );
 }

@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
+import 'package:flutter_stor/util/style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stor/widgets/custom_expandable.dart';
+import 'package:flutter_stor/widgets/custom_list_tile.dart';
+import 'package:flutter_stor/widgets/custom_text_field.dart';
+import 'package:flutter_stor/widgets/expandable_list.dart';
+import 'package:flutter_stor/util/switchmsrou9a.dart';
+import 'package:provider/provider.dart';
 class Otp extends StatefulWidget {
   bool? first;
   bool? last;
@@ -13,6 +25,7 @@ class Otp extends StatefulWidget {
 class _OtpState extends State<Otp> {
   @override
   Widget build(BuildContext context) {
+     var provider = context.watch<Themeprov>();
     return Container(
       height: 85.h,
       width: 45.w,
@@ -20,6 +33,7 @@ class _OtpState extends State<Otp> {
       child: AspectRatio(
         aspectRatio: 1.0,
         child: TextField(
+          
           autofocus: true,
           onChanged: (value) {
             if (value.length == 1 && widget.last == false) {
@@ -32,7 +46,7 @@ class _OtpState extends State<Otp> {
           showCursor: false,
           readOnly: false,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold,color:provider.mymode ? Colors.white : Colors.black ),
           keyboardType: TextInputType.number,
           maxLength: 1,
           decoration: InputDecoration(

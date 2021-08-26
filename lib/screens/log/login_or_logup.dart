@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/log/log_in.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/widgets/custom_button.dart';
@@ -60,11 +61,19 @@ class _RegesterState extends State<Regester> {
               ),
               InkWell(
                 borderRadius: BorderRadius.circular(90.r),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return LogIn();
+                  }));
+                },
                 child: CustomButton(
                   color: Style.primaryColor,
                   text: 'Continue With E-mail',
-                  icon: Icons.mail,
+                  icon: Icon(
+                    Icons.email,
+                    color: Style.whiteColor,
+                    size: 30.sp,
+                  ),
                 ),
               ),
               SizedBox(
@@ -90,10 +99,7 @@ class _RegesterState extends State<Regester> {
                         padding: EdgeInsets.only(left: 24.w),
                         child: Row(
                           children: [
-                            Icon(
-                              Icons.email,
-                              size: 30,
-                            ),
+                            Image.asset('assets/icon/google.png'),
                             SizedBox(
                               width: 10.w,
                             ),
@@ -118,7 +124,7 @@ class _RegesterState extends State<Regester> {
                 child: CustomButton(
                   color: Style.blueColor,
                   text: 'Continue With Facebook',
-                  icon: Icons.email,
+                  icon: Image.asset('assets/icon/facebook.png'),
                 ),
               ),
               SizedBox(

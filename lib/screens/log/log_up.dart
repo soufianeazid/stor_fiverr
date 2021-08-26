@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/log/log_in.dart';
+import 'package:flutter_stor/screens/log/login_or_logup.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
@@ -28,152 +30,165 @@ class _LogUpState extends State<LogUp> {
               color: provider.mymode ? Colors.white : Colors.black,
               size: 40.sp,
             ),
-            onPressed: () {},
+            onPressed: () {
+               Navigator.pop(context, MaterialPageRoute(builder: (context) {
+                    return LogIn();
+                  }));
+            },
           ),
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Regester();
+                  }));
+                },
                 icon: Icon(
                   Icons.close,
                   color: provider.mymode ? Colors.white : Colors.black,
-                  size: 30,
+                  size: 40.sp,
                 ))
           ],
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 19, top: 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Akwaaba to Adlynck',
-                    style: provider.mymode
-                        ? Style.headingTextDark1
-                        : Style.buttonText2,
-                  ),
-                  Text('Sign up to manage your account.',
-                      style: Style.descreption),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            CustomTExtField(
-              icon: Icons.person,
-              text: 'Name',
-            ),
-            SizedBox(
-              height: 25.h,
-            ),
-            CustomTExtField(
-              icon: Icons.email,
-              text: 'Email',
-            ),
-            SizedBox(
-              height: 25.h,
-            ),
-            PassTextFild(
-              icon: Icons.vpn_key_outlined,
-              text: 'Password',
-            ),
-            SizedBox(
-              height: 25.h,
-            ),
-            PassTextFild(
-              icon: Icons.vpn_key_outlined,
-              text: 'Password Again',
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 59.w),
-              child: InkWell(
-                onTap: () {},
-                child: Container(
-                  height: 46.h,
-                  width: 257.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90.r),
-                      color: Style.primaryColor),
-                  child: Center(
-                      child: Text(
-                    'Sign Up',
-                    style: Style.buttonText,
-                  )),
+        body: SingleChildScrollView(
+          physics:const  NeverScrollableScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 19.w,),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Akwaaba to Adlynck',
+                      style: provider.mymode
+                          ? Style.headingTextDark1
+                          : Style.buttonText2,
+                    ),
+                    Text('Sign up to manage your account.',
+                        style: Style.descreption),
+                  ],
                 ),
               ),
-            ),
-            SizedBox(height: 35.h),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 63),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'By signing up for an account you agree to our',
-                    style: Style.whiteButtonText,
-                  ),
-                  SizedBox(
-                    height: 3.h,
-                  ),
-                  TextButton(
-                      onPressed: () {}, child: Text('Terms and Conditions')),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.copyright_rounded,
-                        color: Style.grey4Color,
-                        size: 20,
-                      ),
-                      Text(
-                        '2021 Adlynck from Omama Studios',
-                        style: Style.whiteButtonText,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  Text(
-                    'Already have an account?',
-                    style: provider.mymode
-                        ? Style.headingTextDark1
-                        : Style.whiteButtonText,
-                  ),
-                  SizedBox(
-                    height: 15.h,
-                  ),
-                  Container(
+              
+              CustomTExtField(
+                icon: Icons.person,
+                text: 'Name',
+              ),
+              SizedBox(
+                height: 25.h,
+              ),
+              CustomTExtField(
+                icon: Icons.email,
+                text: 'Email',
+              ),
+              SizedBox(
+                height: 25.h,
+              ),
+              PassTextFild(
+                icon: Icons.vpn_key_outlined,
+                text: 'Password',
+              ),
+              SizedBox(
+                height: 25.h,
+              ),
+              PassTextFild(
+                icon: Icons.vpn_key_outlined,
+                text: 'Password Again',
+              ),
+              SizedBox(
+                height: 40.h,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 59.w),
+                child: InkWell(
+                  onTap: () {},
+                  child: Container(
                     height: 46.h,
                     width: 257.w,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90.r),
-                      border: Border.all(
-                        color: provider.mymode
-                            ? Style.whiteColor
-                            : Style.grey4Color,
-                      ),
-                    ),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Log in',
-                        style: provider.mymode
-                            ? Style.buttonText
-                            : Style.whiteButtonText,
-                      ),
-                    ),
+                        borderRadius: BorderRadius.circular(90.r),
+                        color: Style.primaryColor),
+                    child: Center(
+                        child: Text(
+                      'Sign Up',
+                      style: Style.buttonText,
+                    )),
                   ),
-                ],
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 35.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 63.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'By signing up for an account you agree to our',
+                      style: Style.whiteButtonText,
+                    ),
+                    SizedBox(
+                      height: 3.h,
+                    ),
+                    TextButton(
+                        onPressed: () {}, child: Text('Terms and Conditions')),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.copyright_rounded,
+                          color: Style.grey4Color,
+                          size: 20.sp,
+                        ),
+                        Text(
+                          '2021 Adlynck from Omama Studios',
+                          style: Style.whiteButtonText,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    Text(
+                      'Already have an account?',
+                      style: provider.mymode
+                          ? Style.headingTextDark1
+                          : Style.whiteButtonText,
+                    ),
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    Container(
+                      height: 46.h,
+                      width: 257.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(90.r),
+                        border: Border.all(
+                          color: provider.mymode
+                              ? Style.whiteColor
+                              : Style.grey4Color,
+                        ),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context, MaterialPageRoute(builder: (context) {
+                    return LogIn();
+                  }));
+                        },
+                        child: Text(
+                          'Log in',
+                          style: provider.mymode
+                              ? Style.buttonText
+                              : Style.whiteButtonText,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

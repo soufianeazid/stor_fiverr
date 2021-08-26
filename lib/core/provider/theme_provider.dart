@@ -37,4 +37,10 @@ class Themeprov extends ChangeNotifier {
     // print(value);
     notifyListeners();
   }
+  bool val=false;
+  changeSwitch(x){
+    val=x;
+    notifyListeners();
+    
+  }
 }

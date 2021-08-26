@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter_stor/main.dart';
-import 'package:flutter_stor/screens/pages/my_home_page.dart';
-import 'package:flutter_stor/screens/pages/profile.dart';
-import 'package:flutter_stor/util/save.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/widgets/custom_list_tile.dart';
 import 'package:flutter_stor/widgets/expandable_list.dart';
 import 'package:flutter_stor/util/switchmsrou9a.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:provider/provider.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -34,10 +29,9 @@ class _SettingScreenState extends State<SettingScreen> {
             color: provider.mymode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-           Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MyHomePage()));
+            Navigator.pop(
+              context,
+            );
           },
         ),
         title: Text(
@@ -58,7 +52,9 @@ class _SettingScreenState extends State<SettingScreen> {
               wlidat: [
                 Column(
                   children: [
-                    CustomListTile(name: 'My Video Adverts',),
+                    CustomListTile(
+                      name: 'My Video Adverts',
+                    ),
                     CustomListTile(name: 'Chat Messages'),
                     CustomListTile(name: 'Adlynck Highlights'),
                     CustomListTile(name: 'News And Recommendations'),

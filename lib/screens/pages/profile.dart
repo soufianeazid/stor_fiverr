@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/%20manage_video.dart';
 import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
+import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/screens/pages/setting_screen.dart';
 import 'package:flutter_stor/widgets/categori_button.dart';
 import 'package:flutter_stor/widgets/container_dyal_profil.dart';
@@ -37,43 +37,44 @@ class _ProfileState extends State<Profile> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 SizedBox(
+                SizedBox(
                   height: 19.h,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(
-                        ('assets/image/paner_name.png'),
-                        height: 30.h,
-                        width: 107.w,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.search,
-                                color: provider.mymode
-                                    ? Colors.white
-                                    : Colors.black,
-                                size: 30.sp,
-                              )),
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_none,
-                                color: provider.mymode
-                                    ? Colors.white
-                                    : Colors.black,
-                                size: 30.sp,
-                              )),
-                        ],
-                      ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(
+                      ('assets/image/paner_name.png'),
+                      height: 30.h,
+                      width: 107.w,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        IconButton(
+                            onPressed: () {
+                               Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Search()));
+                            },
+                            icon: Icon(
+                              Icons.search,
+                              color:
+                                  provider.mymode ? Colors.white : Colors.black,
+                              size: 30.sp,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.notifications_none,
+                              color:
+                                  provider.mymode ? Colors.white : Colors.black,
+                              size: 30.sp,
+                            )),
+                      ],
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 30.h,
@@ -119,10 +120,12 @@ class _ProfileState extends State<Profile> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: (){Navigator.push(
+                      onTap: () {
+                        Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => EditProfil()));},
+                                builder: (context) => EditProfil()));
+                      },
                       child: Container(
                         height: 35.h,
                         width: 97.w,
@@ -185,29 +188,41 @@ class _ProfileState extends State<Profile> {
                 SizedBox(
                   height: 26.h,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      onTap: (){},
-                      child: ProfileCuntent(
-                        image: provider.mymode
-                            ? 'assets/image/dark_vid.png'
-                            : 'assets/image/light_vid.png',
-                        text: 'Video Adverts 20',
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 29.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ManageVideo();
+                            }));
+                          },
+                          child: ProfileCuntent(
+                            image: provider.mymode
+                                ? 'assets/image/dark_vid.png'
+                                : 'assets/image/light_vid.png',
+                            text: 'Video Adverts 20',
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                width: 20.w,
-                ),
-                    InkWell(
-                      onTap: (){},
-                      child: ProfileCuntent(
-                        image: 'assets/image/Vector-4.png',
-                        text: 'Requested 05',
+                      SizedBox(
+                        width: 20.w,
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: InkWell(
+                          onTap: () {},
+                          child: ProfileCuntent(
+                            image: 'assets/image/Vector-4.png',
+                            text: 'Requested 05',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 23.h, left: 20.w),
@@ -224,21 +239,21 @@ class _ProfileState extends State<Profile> {
                         onTap: () {},
                         child: CustomRowButton(
                           image: 'assets/icon/facebook.png',
-                          text: 'facebook',
+                          text: 'Facebook',
                         ),
                       ),
                       InkWell(
                         onTap: () {},
                         child: CustomRowButton(
                           image: 'assets/icon/instagram.png',
-                          text: 'instagram',
+                          text: 'Instagram',
                         ),
                       ),
                       InkWell(
                         onTap: () {},
                         child: CustomRowButton(
                           image: 'assets/icon/pinterest.png',
-                          text: 'pinterest',
+                          text: 'Pinterest',
                         ),
                       ),
                       InkWell(

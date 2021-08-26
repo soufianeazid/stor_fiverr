@@ -44,7 +44,7 @@ class _ExpandableListState extends State<ExpandableList> {
       iconColor: provider.mymode ? Colors.white : Colors.black,
       textColor: provider.mymode ? Colors.white : Colors.black,
       trailing: Icon(
-        Icons.arrow_drop_down_circle,
+        Icons.keyboard_arrow_down,
         color: provider.mymode ? Colors.white : Colors.black,
       ),
       children: <Widget>[

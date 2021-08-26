@@ -7,7 +7,11 @@ import 'package:flutter_stor/screens/log/login_or_logup.dart';
 import 'package:flutter_stor/screens/log/log_up.dart';
 import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
 import 'package:flutter_stor/screens/pages/home.dart';
+import 'package:flutter_stor/screens/pages/inbox.dart';
 import 'package:flutter_stor/screens/pages/my_home_page.dart';
+import 'package:flutter_stor/screens/pages/public_profile.dart';
+import 'package:flutter_stor/screens/pages/request.dart';
+import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/screens/verification/email_verfy.dart';
 import 'package:flutter_stor/screens/verification/phone_verfy.dart';
 import 'package:flutter_stor/screens/reset_pass/new_pass.dart';
@@ -17,6 +21,8 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:device_preview/device_preview.dart';
+
+import 'screens/pages/postr_you_liked.dart';
 
 void main() => runApp(
       DevicePreview(

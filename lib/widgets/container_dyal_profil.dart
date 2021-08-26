@@ -29,7 +29,7 @@ class _ProfileCuntentState extends State<ProfileCuntent> {
     var provider = context.watch<Themeprov>();
     return Container(
       height: 102.h,
-      width: 149.h,
+      //width: 149.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
         color: provider.mymode ? Style.blackColor : Style.whiteColor,

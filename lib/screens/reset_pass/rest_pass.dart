@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/log/log_in.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
@@ -31,69 +32,75 @@ class _ResetPasswordState extends State<ResetPassword> {
               color: provider.mymode ? Colors.white : Colors.black,
               size: 40.sp,
             ),
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return LogIn();
+                  }));
+            },
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 50.h,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 19.w),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Reset Password',
-                    style: provider.mymode
-                        ? Style.headingTextDark
-                        : Style.headingText,
-                  ),
-                  SizedBox(
-                    height: 13.h,
-                  ),
-                  Text(
-                    'Enter the email associated with your\naccount to receive a verification\ncode to reset your password.',
-                    style: provider.mymode
-                        ? Style.blackButtonText
-                        : Style.whiteButtonText,
-                  ),
-                  SizedBox(
-                    height: 40.h,
-                  ),
-                  Container(
-                      child: CustomTExtField(
-                    icon: Icons.email,
-                    text: 'Email',
-                  ))
-                ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 50.h,
               ),
-            ),
-            SizedBox(
-              height: 99.h,
-            ),
-            Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 59.w),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(90.r),
-                onTap: () {},
-                child: Container(
-                  height: 46.h,
-                  width: 257.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(90.r),
-                      color: Style.primaryColor),
-                  child: Center(
-                      child: Text(
-                    'Let’s Go!',
-                    style: Style.buttonText,
-                  )),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 19.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Reset Password',
+                      style: provider.mymode
+                          ? Style.headingTextDark
+                          : Style.headingText,
+                    ),
+                    SizedBox(
+                      height: 13.h,
+                    ),
+                    Text(
+                      'Enter the email associated with your\naccount to receive a verification\ncode to reset your password.',
+                      style: provider.mymode
+                          ? Style.blackButtonText
+                          : Style.whiteButtonText,
+                    ),
+                    SizedBox(
+                      height: 40.h,
+                    ),
+                    Container(
+                        child: CustomTExtField(
+                      icon: Icons.email,
+                      text: 'Email',
+                    ))
+                  ],
                 ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 99.h,
+              ),
+              Padding(
+                padding:  EdgeInsets.symmetric(horizontal: 59.w),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(90.r),
+                  onTap: () {},
+                  child: Container(
+                    height: 46.h,
+                    width: 257.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(90.r),
+                        color: Style.primaryColor),
+                    child: Center(
+                        child: Text(
+                      'Let’s Go!',
+                      style: Style.buttonText,
+                    )),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

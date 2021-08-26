@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/log/log_up.dart';
+import 'package:flutter_stor/screens/log/login_or_logup.dart';
+import 'package:flutter_stor/screens/reset_pass/rest_pass.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
 import 'package:flutter_stor/util/style.dart';
 
@@ -24,7 +27,11 @@ class _LogInState extends State<LogIn> {
           elevation: 0.0,
           actions: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Regester();
+                  }));
+                },
                 icon: Icon(
                   Icons.close,
                   color: provider.mymode ? Colors.white : Colors.black,
@@ -33,9 +40,7 @@ class _LogInState extends State<LogIn> {
           ],
         ),
         backgroundColor: provider.mymode ? Colors.black : Colors.white,
-        body: Container(
-          height: double.infinity,
-          width: double.infinity,
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -87,7 +92,11 @@ class _LogInState extends State<LogIn> {
                 height: 17.h,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ResetPassword();
+                  }));
+                },
                 child: Padding(
                   padding: EdgeInsets.only(left: 115.w),
                   child: Text('Forgot your Password?'),
@@ -133,7 +142,11 @@ class _LogInState extends State<LogIn> {
                     ),
                     InkWell(
                       borderRadius: BorderRadius.circular(90.r),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context,MaterialPageRoute(builder: (context){
+                    return LogUp();
+                  }));
+                      },
                       child: Container(
                         height: 46.h,
                         width: 257.w,
@@ -147,6 +160,7 @@ class _LogInState extends State<LogIn> {
                         )),
                       ),
                     ),
+                    
                   ],
                 ),
               ),

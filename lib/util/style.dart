@@ -15,6 +15,13 @@ class Style {
   static final Color k7aljdid = Color(0xFF242832);
   static final Color grey6 = Color(0xFFF2F2F2);
   static final Color dark = Color(0xFF101010);
+  static final Color green2 = Color(0xFF27AE60);
+  static final Color colorGrey = Color(0xFFF3F3F3);
+  static final Color yellew = Color(0xFFFF9F0A);
+  static final Color bpdy = Color(0xFF717171);
+  static final Color c4 = Color(0xFFC4C4C4);
+  static final Color purpel = Color(0xFFBF5AF2);
+
   static final Color grey = Colors.grey.withOpacity(0.6);
 
 //<<<<<<< HEAD
@@ -84,6 +91,12 @@ class Style {
   static TextStyle buttonText2 = TextStyle(
     fontFamily: 'karla',
     color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+  );
+  static TextStyle grey20 = TextStyle(
+    fontFamily: 'karla',
+    color: Style.bpdy,
     fontSize: 20.sp,
     fontWeight: FontWeight.w700,
   );
@@ -172,10 +185,23 @@ class Style {
     fontFamily: 'karla',
     color: Colors.black,
     fontSize: 16.sp,
-    fontWeight: FontWeight.w400,);
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle greytext = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.grey,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
   static TextStyle smallblack = TextStyle(
     fontFamily: 'karla',
     color: Colors.black,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle smallwhait = TextStyle(
+    fontFamily: 'karla',
+    color: Colors.white,
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
   );
@@ -203,6 +229,8 @@ class Style {
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
   );
+
+
 //=======
 //>>>>>>> 34e7030ed63b10f735e268dc8d6f3304fa903dab
 }

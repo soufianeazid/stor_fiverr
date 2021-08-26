@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/screens/pages/home.dart';
+import 'package:flutter_stor/screens/pages/inbox.dart';
 import 'package:flutter_stor/screens/pages/profile.dart';
+import 'package:flutter_stor/screens/pages/request.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_stor/widgets/custom_animation_bottom_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -78,20 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget getBody() {
     List<Widget> pages = [
       Home(),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "Users",
-          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
-        ),
-      ),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "Messages",
-          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
-        ),
-      ),
+      Inbox(),
       Container(
         alignment: Alignment.center,
         child: Text(
@@ -99,7 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
         ),
       ),
-      Profile(),
+      Request(),
+       Profile(),
+      
+     
     ];
     return IndexedStack(
       index: _currentIndex,

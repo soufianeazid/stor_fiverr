@@ -3,21 +3,27 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/util/style.dart';
 
 class GridCuntent extends StatelessWidget {
-  const GridCuntent({Key? key}) : super(key: key);
+  Widget? icon;
+  
+   GridCuntent({Key? key,this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    
     return Stack(
       children: [
-        Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24.r),
-              color: Colors.black,
-              image: DecorationImage(
-                  image: AssetImage(
-                    'assets/image/watch.png',
-                  ),
-                  fit: BoxFit.cover)),
+        InkWell(
+          onTap: (){},
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(24.r),
+                color: Colors.black,
+                image: DecorationImage(
+                    image: AssetImage(
+                      'assets/image/1.png',
+                    ),
+                    fit: BoxFit.cover)),
+          ),
         ),
         Padding(
           padding: EdgeInsets.only(left: 9.w, top: 9.h),
@@ -52,7 +58,7 @@ class GridCuntent extends StatelessWidget {
                 height: 19.h,
                 width: 41.w,
                 decoration: BoxDecoration(
-                  color: Style.blackColor.withOpacity(0.5),
+                  color: Style.blackColor.withOpacity(0.5.r),
                   borderRadius: BorderRadius.circular(5.r),
                 ),
                 child: Row(
@@ -82,30 +88,22 @@ class GridCuntent extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Style.grey4Color,
                 borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20))),
-            child: Center(
-                child: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.more_horiz,
-                color: Style.whiteColor,
-                size: 20,
-              ),
-            )),
+                    topRight: Radius.circular(20.r),
+                    bottomLeft: Radius.circular(20.r))),
+            child:icon 
           ),
         ),
         Positioned(
-          bottom: 1,
+          bottom: 1.h,
           child: Container(
             height: 36.h,
             width:160.w,
             decoration: BoxDecoration(
               color: Style.black25,
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(20))),
-                    child: Center(child: Text('Text prodNume',overflow: TextOverflow.ellipsis,style: Style.prodName,),),
+                    bottomRight: Radius.circular(20.r),
+                    bottomLeft: Radius.circular(20.r))),
+                    child: Center(child: Text('Nike red color spor...',overflow: TextOverflow.ellipsis,style: Style.prodName,),),
           ),
         )
       ],

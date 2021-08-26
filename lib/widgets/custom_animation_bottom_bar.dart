@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stor/widgets/custom_bottom_sheet.dart';
 
 import 'package:provider/provider.dart';
 
@@ -83,23 +83,34 @@ class CustomAnimatedBottomBar extends StatelessWidget {
               ),
             ),
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal:138.w,vertical:9.h ),
+              padding: EdgeInsets.symmetric(horizontal: 138.w, vertical: 9.h),
               child: InkWell(
-                onTap: (){},
+                onTap: () {
+                  showModalBottomSheet(
+                          elevation: 100,
+                          backgroundColor:
+                              provider.mymode ? Style.dark : Style.whiteColor,
+                          shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadius.only(topLeft:Radius.circular(22.r),topRight:Radius.circular(22.r), ),
+                          ),
+                          context: context,
+                          builder: (context) {
+                            return CustomBottomSeet();
+                          });
+                },
                 child: Container(
-                    height: 38.h,
-                    width: 38.w,
-                    decoration: BoxDecoration(
-                        color: Style.primaryColor, shape: BoxShape.circle),
-                    child: Icon(
-                      Icons.add,
-                      size: 16.sp,
-                      color: Colors.white,
-                    ),
+                  height: 38.h,
+                  width: 38.w,
+                  decoration: BoxDecoration(
+                      color: Style.primaryColor, shape: BoxShape.circle),
+                  child: Icon(
+                    Icons.add,
+                    size: 16.sp,
+                    color: Colors.white,
                   ),
+                ),
               ),
             ),
-           
           ],
         ),
       ),
