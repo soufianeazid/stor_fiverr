@@ -4,12 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/provider_setup.dart';
 import 'package:flutter_stor/screens/pages/my_home_page.dart';
 import 'package:flutter_stor/util/save.dart';
+import 'package:flutter_stor/widgets/video_player.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_preview/device_preview.dart';
-
-
-
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
@@ -48,6 +46,7 @@ class _MyAppState extends State<MyApp> {
           ),
           debugShowCheckedModeBanner: false,
           home: MyHomePage(),
+          
         ),
         designSize: const Size(375, 812),
       ),

@@ -19,6 +19,7 @@ class _EditProfilState extends State<EditProfil> {
       child: Scaffold(
         backgroundColor: provider.mymode ? Style.dark : Colors.white,
         appBar: AppBar(
+          
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_new,

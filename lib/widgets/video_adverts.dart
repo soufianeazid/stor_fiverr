@@ -89,7 +89,7 @@ class CustomContainer extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20.r),
                       bottomLeft: Radius.circular(20.r))),
-              child: child,
+              child: Center(child: child),
             ),
           ),
           Positioned(

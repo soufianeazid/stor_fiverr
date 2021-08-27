@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_stor/widgets/grid_viwe_cuntent.dart';
 import 'package:flutter_stor/widgets/video_adverts.dart';
-import 'package:flutter_stor/widgets/grid_viwe.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
-class ManageVideo extends StatefulWidget {
-  const ManageVideo({Key? key}) : super(key: key);
+class AllVideoAdverts extends StatefulWidget {
+  const AllVideoAdverts({Key? key}) : super(key: key);
 
   @override
-  _ManageVideoState createState() => _ManageVideoState();
+  _AllVideoAdverstState createState() => _AllVideoAdverstState();
 }
 
-class _ManageVideoState extends State<ManageVideo> {
+class _AllVideoAdverstState extends State<AllVideoAdverts> {
   @override
   Widget build(BuildContext context) {
     var provider = context.watch<Themeprov>();
@@ -104,7 +105,33 @@ class _ManageVideoState extends State<ManageVideo> {
               SizedBox(
                 height: 22.h,
               ),
-              CustomGridViwe()
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 22.w),
+                child: Container(
+                  height: 1250,
+                  width: double.infinity,
+                  child: StaggeredGridView.countBuilder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisCount: 4,
+                    itemCount: 100,
+                    itemBuilder: (BuildContext context, int index) =>
+                        GridCuntent(
+                      icon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.more_horiz,
+                          color: Style.whiteColor,
+                          size: 20.sp,
+                        ),
+                      ),
+                    ),
+                    staggeredTileBuilder: (int index) =>
+                        StaggeredTile.count(2, index.isEven ? 2.5 : 1.7),
+                    mainAxisSpacing: 15.0.w,
+                    crossAxisSpacing: 15.0.h,
+                  ),
+                ),
+              )
             ],
           ),
         ),

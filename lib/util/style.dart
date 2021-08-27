@@ -49,6 +49,12 @@ class Style {
     fontSize: 20.sp,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle primfont = TextStyle(
+    fontFamily: 'karla',
+    color: Style.primaryColor,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w700,
+  );
   static TextStyle body = TextStyle(
     fontFamily: 'karla',
     color: Color(0xFF717171),

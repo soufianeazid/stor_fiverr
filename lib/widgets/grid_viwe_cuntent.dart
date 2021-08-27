@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/util/style.dart';
+import 'package:flutter_stor/widgets/video_player.dart';
 
 class GridCuntent extends StatelessWidget {
   Widget? icon;
@@ -13,7 +14,12 @@ class GridCuntent extends StatelessWidget {
     return Stack(
       children: [
         InkWell(
-          onTap: (){},
+          onTap: (){
+            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => VideoPlayerScreen()));
+          },
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(24.r),
@@ -90,7 +96,7 @@ class GridCuntent extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20.r),
                     bottomLeft: Radius.circular(20.r))),
-            child:icon 
+            child:Center(child: icon) 
           ),
         ),
         Positioned(

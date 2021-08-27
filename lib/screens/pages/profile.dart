@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter_stor/screens/pages/%20manage_video.dart';
+import 'package:flutter_stor/screens/pages/all_video_adverts.dart';
 import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/screens/pages/setting_screen.dart';
@@ -193,7 +192,7 @@ class _ProfileState extends State<Profile> {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return ManageVideo();
+                              return AllVideoAdverts();
                             }));
                           },
                           child: ProfileCuntent(
