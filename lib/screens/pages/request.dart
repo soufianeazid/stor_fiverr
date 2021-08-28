@@ -4,6 +4,8 @@ import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/screens/pages/notification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/util/style.dart';
+import 'package:flutter_stor/widgets/custom_app_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 class Request extends StatefulWidget {
@@ -30,50 +32,7 @@ class _RequestState extends State<Request> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 19.h,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      ('assets/image/paner_name.png'),
-                      height: 30.h,
-                      width: 107.w,
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Search()));
-                            },
-                            icon: Icon(
-                              Icons.search,
-                              color: provider.mymode
-                                  ? Style.whiteColor
-                                  : Style.dark,
-                              size: 30.sp,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Notifications()));
-                            },
-                            icon: Icon(
-                              Icons.notifications_none,
-                              color:
-                                  provider.mymode ? Colors.white : Colors.black,
-                              size: 30.sp,
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
+                CustomAppBar(),
                 SizedBox(
                   height: 16.h,
                 ),
@@ -101,7 +60,7 @@ class _RequestState extends State<Request> {
                   height: 35.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 69),
+                  padding: EdgeInsets.symmetric(horizontal: 69.w),
                   child: Container(
                     height: 46.h,
                     width: 237.w,
@@ -145,23 +104,10 @@ class _RequestState extends State<Request> {
                             child: ListView(
                               children: [
                                 CustomCuntent(
-                                  child: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(Icons.chat_outlined,
-                                        size: 15.sp, color: Style.primaryColor),
-                                    Text('Chat', style: Style.pinki),
-                                  ),
-                                  child1: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(
-                                      Icons.call,
-                                      size: 15.sp,
-                                      color: Style.primaryColor,
-                                    ),
-                                    Text('Call', style: Style.pinki),
-                                  ),
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
                                   child2: children(
                                     59.w,
                                     Style.greenColor,
@@ -176,30 +122,10 @@ class _RequestState extends State<Request> {
                                   ),
                                 ),
                                 CustomCuntent(
-                                  child: InkWell(
-                                    onTap: () {},
-                                    child: children(
-                                      67.w,
-                                      Style.grey6,
-                                      Icon(Icons.chat_outlined,
-                                          size: 15.sp,
-                                          color: Style.primaryColor),
-                                      Text('Chat', style: Style.pinki),
-                                    ),
-                                  ),
-                                  child1: InkWell(
-                                    onTap: () {},
-                                    child: children(
-                                      67.w,
-                                      Style.grey6,
-                                      Icon(
-                                        Icons.call,
-                                        size: 15.sp,
-                                        color: Style.primaryColor,
-                                      ),
-                                      Text('Call', style: Style.pinki),
-                                    ),
-                                  ),
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
                                   child2: children(
                                     59.w,
                                     Style.greenColor,
@@ -214,23 +140,10 @@ class _RequestState extends State<Request> {
                                   ),
                                 ),
                                 CustomCuntent(
-                                  child: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(Icons.chat_outlined,
-                                        size: 15.sp, color: Style.primaryColor),
-                                    Text('Chat', style: Style.pinki),
-                                  ),
-                                  child1: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(
-                                      Icons.call,
-                                      size: 15.sp,
-                                      color: Style.primaryColor,
-                                    ),
-                                    Text('Call', style: Style.pinki),
-                                  ),
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
                                   child2: children(
                                     59.w,
                                     Style.greenColor,
@@ -245,23 +158,10 @@ class _RequestState extends State<Request> {
                                   ),
                                 ),
                                 CustomCuntent(
-                                  child: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(Icons.chat_outlined,
-                                        size: 15.sp, color: Style.primaryColor),
-                                    Text('Chat', style: Style.pinki),
-                                  ),
-                                  child1: children(
-                                    67.w,
-                                    Style.grey6,
-                                    Icon(
-                                      Icons.call,
-                                      size: 15.sp,
-                                      color: Style.primaryColor,
-                                    ),
-                                    Text('Call', style: Style.pinki),
-                                  ),
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
                                   child2: children(
                                     59.w,
                                     Style.greenColor,
@@ -274,7 +174,44 @@ class _RequestState extends State<Request> {
                                       style: Style.blackButtonText,
                                     ),
                                   ),
-                                )
+                                ),
+                                CustomCuntent(
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
+                                  child2: children(
+                                    59.w,
+                                    Style.greenColor,
+                                    Text(
+                                      'GHC',
+                                      style: Style.blackButtonText,
+                                    ),
+                                    Text(
+                                      '350',
+                                      style: Style.blackButtonText,
+                                    ),
+                                  ),
+                                ),
+                                CustomCuntent(
+                                  child: children1(
+                                      FontAwesomeIcons.comment, 'Chat'),
+                                  child1:
+                                      children1(Icons.phone_outlined, 'Call'),
+                                  child2: children(
+                                    59.w,
+                                    Style.greenColor,
+                                    Text(
+                                      'GHC',
+                                      style: Style.blackButtonText,
+                                    ),
+                                    Text(
+                                      '350',
+                                      style: Style.blackButtonText,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 150.h,)
                               ],
                             ),
                           ),
@@ -410,6 +347,7 @@ class _RequestState extends State<Request> {
                                     ),
                                   ),
                                 ),
+                                 SizedBox(height: 150.h,)
                               ],
                             ),
                           ),
@@ -473,7 +411,7 @@ class _CustomCuntentState extends State<CustomCuntent> {
                   children: [
                     Row(
                       children: [
-                        Text('Ann Stanton'),
+                        Text('Ann Stanton',style: provider.mymode?Style.blackButtonText:Style.blacktext,),
                         SizedBox(
                           width: 10.w,
                         ),
@@ -483,11 +421,11 @@ class _CustomCuntentState extends State<CustomCuntent> {
                               'Pro Seller',
                               style: Style.pinki,
                             ),
-                            Image.asset(
-                              'assets/icon/Vector-4.png',
-                              height: 12.h,
-                              width: 12.w,
-                            ),
+                            Icon(
+                              Icons.verified,
+                              size: 16.sp,
+                              color: Style.primaryColor,
+                            )
                           ],
                         ),
                       ],
@@ -497,10 +435,10 @@ class _CustomCuntentState extends State<CustomCuntent> {
                     ),
                     Row(
                       children: [
-                        Image.asset(
-                          'assets/icon/circle_check.png',
-                          height: 13.h,
-                          width: 13.w,
+                        Icon(
+                          Icons.verified,
+                          size: 16.sp,
+                          color: Style.primaryColor,
                         ),
                         Text(
                           'Negotiable',
@@ -533,11 +471,11 @@ class _CustomCuntentState extends State<CustomCuntent> {
                   Row(
                     children: [
                       InkWell(
-                       onTap: (){},
+                        onTap: () {},
                         child: widget.child!,
                       ),
                       SizedBox(
-                        width: 10.w,
+                        width: 15.w,
                       ),
                       InkWell(
                         onTap: () {},
@@ -571,9 +509,27 @@ Widget children(double width, Color color, Widget child1, child2) {
         children: [
           InkWell(child: child1),
           SizedBox(width: 5.w),
-          child2,
+          InkWell(child: child2),
         ],
       ),
+    ),
+  );
+}
+
+Widget children1(IconData child1, String child2) {
+  return Padding(
+    padding:  EdgeInsets.symmetric(horizontal: 5.w,vertical: 5.h),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Icon(
+          child1,
+          size: 20.sp,
+          color: Style.primaryColor,
+        ),
+        SizedBox(width: 10.w,),
+        Text(child2, style: Style.pinki)
+      ],
     ),
   );
 }

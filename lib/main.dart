@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_preview/device_preview.dart';
 // ignore: unused_import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,

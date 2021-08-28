@@ -4,9 +4,12 @@ import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/screens/pages/all_video_adverts.dart';
 import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
 import 'package:flutter_stor/screens/pages/notification.dart';
+import 'package:flutter_stor/screens/pages/post_request.dart';
+import 'package:flutter_stor/screens/pages/request_verification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/screens/pages/setting_screen.dart';
 import 'package:flutter_stor/widgets/container_dyal_profil.dart';
+import 'package:flutter_stor/widgets/custom_app_bar.dart';
 import 'package:flutter_stor/widgets/custom_row.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:provider/provider.dart';
@@ -32,50 +35,7 @@ class _ProfileState extends State<Profile> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 19.h,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      ('assets/image/paner_name.png'),
-                      height: 30.h,
-                      width: 107.w,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        IconButton(
-                            onPressed: () {
-                               Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Search()));
-                            },
-                            icon: Icon(
-                              Icons.search,
-                              color:
-                                  provider.mymode ? Colors.white : Colors.black,
-                              size: 30.sp,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Notifications()));
-                            },
-                            icon: Icon(
-                              Icons.notifications_none,
-                              color:
-                                  provider.mymode ? Colors.white : Colors.black,
-                              size: 30.sp,
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
+                CustomAppBar(),
                 SizedBox(
                   height: 30.h,
                 ),
@@ -214,7 +174,12 @@ class _ProfileState extends State<Profile> {
                       ),
                       Expanded(
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RequestVerification()));
+                          },
                           child: ProfileCuntent(
                             image: 'assets/image/Vector-4.png',
                             text: 'Requested 05',

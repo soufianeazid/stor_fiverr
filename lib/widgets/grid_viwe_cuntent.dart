@@ -88,15 +88,18 @@ class GridCuntent extends StatelessWidget {
         Positioned(
           right: 0,
           top: 0,
-          child: Container(
-            height: 28.h,
-            width: 47.w,
-            decoration: BoxDecoration(
-                color: Style.grey4Color,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20.r),
-                    bottomLeft: Radius.circular(20.r))),
-            child:Center(child: icon) 
+          child: InkWell(
+            onTap: (){},
+            child: Container(
+              height: 28.h,
+              width: 47.w,
+              decoration: BoxDecoration(
+                  color: Style.grey4Color,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(20.r),
+                      bottomLeft: Radius.circular(20.r))),
+              child:Center(child: icon) 
+            ),
           ),
         ),
         Positioned(

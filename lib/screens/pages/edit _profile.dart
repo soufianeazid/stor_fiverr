@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/util/style.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 class EditProfil extends StatefulWidget {
@@ -19,7 +20,6 @@ class _EditProfilState extends State<EditProfil> {
       child: Scaffold(
         backgroundColor: provider.mymode ? Style.dark : Colors.white,
         appBar: AppBar(
-          
           leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_new,
@@ -42,11 +42,11 @@ class _EditProfilState extends State<EditProfil> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 156.w),
-                    child: Container(
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 156.w),
+                child: Stack(
+                  children: [
+                    Container(
                       height: 64.h,
                       width: 64.h,
                       decoration: BoxDecoration(
@@ -55,10 +55,7 @@ class _EditProfilState extends State<EditProfil> {
                               image: AssetImage(
                                   'assets/image/photo_profile.png'))),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 159.w),
-                    child: IconButton(
+                    IconButton(
                       icon: Icon(
                         Icons.camera_alt_outlined,
                         size: 30.sp,
@@ -66,8 +63,8 @@ class _EditProfilState extends State<EditProfil> {
                       ),
                       onPressed: () {},
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(
                 height: 32.h,
@@ -146,12 +143,16 @@ class EditTextFiled extends StatelessWidget {
                         ? Style.whiteColor
                         : Style.grey4Color))),
         child: TextField(
-           style: TextStyle(color:provider.mymode ? Colors.white : Colors.black ),
+          style:
+              TextStyle(color: provider.mymode ? Colors.white : Colors.black),
           decoration: InputDecoration(
-              suffixIcon: Icon(
-                Icons.edit,
-                size: 18.sp,
-                color: provider.mymode ? Style.whiteColor : Style.grey4Color,
+              suffixIcon: Padding(
+                padding:  EdgeInsets.only(top: 27.h,left: 10.w),
+                child: FaIcon(
+                  FontAwesomeIcons.edit,
+                  color: provider.mymode ? Style.whiteColor : Style.grey4Color,
+                  size: 18.sp,
+                ),
               ),
               labelText: text,
               labelStyle: provider.mymode
@@ -181,8 +182,8 @@ class CustomTextArea extends StatelessWidget {
                         ? Style.whiteColor
                         : Style.grey4Color))),
         child: TextField(
-           style: TextStyle(color:provider.mymode ? Colors.white : Colors.black ),
-         
+          style:
+              TextStyle(color: provider.mymode ? Colors.white : Colors.black),
           decoration: InputDecoration(
               labelText: text,
               labelStyle: provider.mymode

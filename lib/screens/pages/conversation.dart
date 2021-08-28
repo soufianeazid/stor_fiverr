@@ -77,14 +77,13 @@ class _ConverState extends State<Conver> {
             trailing: InkWell(
               onTap: () {},
               child: Container(
-                height: 26.h,
-                width: 26.w,
+                height: 30.h,
+                width: 30.w,
                 decoration: BoxDecoration(
                     color: Style.whiteColor,
                     borderRadius: BorderRadius.circular(4.r),
-                    image: DecorationImage(
-                      image: AssetImage('assets/icon/call copy.png'),
-                    )),
+                    ),
+                    child: Icon(Icons.call_outlined,color: Style.blackColor,size: 25.sp,),
               ),
             ),
           ),

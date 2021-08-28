@@ -72,8 +72,8 @@ class _PostRequestState extends State<PostRequest> {
                     ListTile(
                       leading: Image.asset(
                         'assets/image/per4.png',
-                        height: 32.h,
-                        width: 32.w,
+                        height: 40.h,
+                        width: 40.w,
                       ),
                       title: Container(
                         height: 48.h,

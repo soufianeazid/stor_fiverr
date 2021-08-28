@@ -5,6 +5,7 @@ import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/screens/pages/notification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/widgets/categori_button.dart';
+import 'package:flutter_stor/widgets/custom_app_bar.dart';
 import 'package:flutter_stor/widgets/grid_viwe_cuntent.dart';
 import 'package:flutter_stor/widgets/video_adverts.dart';
 import 'package:flutter_stor/util/style.dart';
@@ -30,46 +31,7 @@ class _HomeState extends State<Home> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      ('assets/image/paner_name.png'),
-                      height: 30.h,
-                      width: 107.w,
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Search()));
-                            },
-                            icon: Icon(
-                              Icons.search,
-                              color:
-                                  provider.mymode ? Colors.white : Colors.black,
-                              size: 30.sp,
-                            )),
-                        IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Notifications()));
-                            },
-                            icon: Icon(
-                              Icons.notifications_none,
-                              color:
-                                  provider.mymode ? Colors.white : Colors.black,
-                              size: 30.sp,
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
+                CustomAppBar(),
                 SizedBox(
                   height: 31.h,
                 ),
@@ -147,19 +109,19 @@ class _HomeState extends State<Home> {
                       CustomContainer(
                         child: Text(
                           'GHC50',
-                          style: Style.headingTextDark,
+                          style: Style.dark15,
                         ),
                       ),
                       CustomContainer(
                         child: Text(
                           'GHC50',
-                          style: Style.headingTextDark,
+                          style: Style.dark15,
                         ),
                       ),
                       CustomContainer(
                         child: Text(
                           'GHC50',
-                          style: Style.headingTextDark,
+                          style: Style.dark15,
                         ),
                       ),
                     ],
@@ -171,17 +133,17 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 22.w),
                   child: Container(
-                    height: 1250,
+                    height: 2000,
                     width: double.infinity,
                     child: StaggeredGridView.countBuilder(
                       physics: const NeverScrollableScrollPhysics(),
                       crossAxisCount: 4,
-                      itemCount: 100,
+                      itemCount: 20,
                       itemBuilder: (BuildContext context, int index) =>
                           GridCuntent(
                               icon: Text(
                         'GHC50',
-                        style: Style.buttonText,
+                        style: Style.smallWhiteText,
                       )),
                       staggeredTileBuilder: (int index) =>
                           StaggeredTile.count(2, index.isEven ? 2.5 : 1.7),
@@ -190,6 +152,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
+                SizedBox(height: 150.h,)
               ],
             ),
           ),

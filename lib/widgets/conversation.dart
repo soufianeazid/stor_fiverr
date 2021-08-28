@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 class Conversation extends StatefulWidget {
   String? image;
-   String? imagev;
+   IconData? imagev;
   String? name = '';
   String? message = '';
   String? date = '';
@@ -75,7 +75,7 @@ class _ConversationState extends State<Conversation> {
               SizedBox(
                 width: 5.w,
               ),
-              Image.asset(widget.imagev!)
+             Icon(widget.imagev,color: Style.primaryColor,size: 17.sp,)
             ],
           )
         ],

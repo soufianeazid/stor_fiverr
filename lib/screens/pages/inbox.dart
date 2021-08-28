@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/screens/pages/conversation.dart';
-import 'package:flutter_stor/screens/pages/notification.dart';
-import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/widgets/conversation.dart';
 import 'package:flutter_stor/util/style.dart';
+import 'package:flutter_stor/widgets/custom_app_bar.dart';
 import 'package:flutter_stor/widgets/custom_text_field.dart';
 import 'package:provider/provider.dart';
 
@@ -27,46 +26,7 @@ class _InboxState extends State<Inbox> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(
-                  ('assets/image/paner_name.png'),
-                  height: 30.h,
-                  width: 107.w,
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Search()));
-                        },
-                        icon: Icon(
-                          Icons.search,
-                          color:
-                              provider.mymode ? Colors.white : Colors.black,
-                          size: 30.sp,
-                        )),
-                    IconButton(
-                        onPressed: () {
-                           Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Notifications()));
-                        },
-                        icon: Icon(
-                          Icons.notifications_none,
-                          color:
-                              provider.mymode ? Colors.white : Colors.black,
-                          size: 30.sp,
-                        )),
-                  ],
-                ),
-              ],
-            ),
+            CustomAppBar(),
             SizedBox(
               height: 24.h,
             ),
@@ -102,7 +62,7 @@ class _InboxState extends State<Inbox> {
                       image: 'assets/image/Rectangle 156.png',
                       name: 'Kaiya Mango',
                       verfy: 'Pro Seller',
-                      imagev: ('assets/icon/Vector-4.png'),
+                      imagev: Icons.verified,
                       message: 'Hi, i love the shoe.. is it still available?',
                       date: '4:21 PM',
                     ),
@@ -118,7 +78,7 @@ class _InboxState extends State<Inbox> {
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',
                       verfy: 'Pro Seller',
-                      imagev: ('assets/icon/Vector-4.png'),
+                      imagev: Icons.verified,
                       message: 'Hi, i love the shoe.. is it still available?',
                       date: '4:21 PM',
                     ),
@@ -134,7 +94,7 @@ class _InboxState extends State<Inbox> {
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',
                       verfy: 'Pro Seller',
-                      imagev: ('assets/icon/Vector-4.png'),
+                      imagev: Icons.verified,
                       message: 'Hi, i love the shoe.. is it still available?',
                       date: '4:21 PM',
                     ),
@@ -150,7 +110,7 @@ class _InboxState extends State<Inbox> {
                       image: 'assets/image/per1.png',
                       name: 'Elias Manik',
                       verfy: 'Pro Seller',
-                      imagev: ('assets/icon/Vector-4.png'),
+                      imagev: Icons.verified,
                       message: 'Hi, i love the shoe.. is it still available?',
                       date: '4:21 PM',
                     ),
@@ -159,7 +119,7 @@ class _InboxState extends State<Inbox> {
                     image: 'assets/image/per1.png',
                     name: 'Elias Manik',
                     verfy: 'Pro Seller',
-                    imagev: ('assets/icon/Vector-4.png'),
+                    imagev: Icons.verified,
                     message: 'Hi, i love the shoe.. is it still available?',
                     date: '4:21 PM',
                   ),
@@ -167,7 +127,7 @@ class _InboxState extends State<Inbox> {
                     image: 'assets/image/per1.png',
                     name: 'Elias Manik',
                     verfy: 'Pro Seller',
-                    imagev: ('assets/icon/Vector-4.png'),
+                    imagev: Icons.verified,
                     message: 'Hi, i love the shoe.. is it still available?',
                     date: '4:21 PM',
                   ),
@@ -175,7 +135,7 @@ class _InboxState extends State<Inbox> {
                     image: 'assets/image/per1.png',
                     name: 'Elias Manik',
                     verfy: 'Pro Seller',
-                    imagev: ('assets/icon/Vector-4.png'),
+                    imagev: Icons.verified,
                     message: 'Hi, i love the shoe.. is it still available?',
                     date: '4:21 PM',
                   ),

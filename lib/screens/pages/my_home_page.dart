@@ -33,8 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 showElevation: true,
                 itemCornerRadius: 24.r,
                 curve: Curves.easeIn,
-                onItemSelected: (index) =>
-                    setState(() => _currentIndex = index),
+                onItemSelected: (index) {
+                 if(index!=2)setState(() => _currentIndex = index);
+                },
                 items: <BottomNavyBarItem>[
                   BottomNavyBarItem(
                     icon: Icon(Icons.home),
@@ -71,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          
         ],
       ),
     );
@@ -81,17 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
     List<Widget> pages = [
       Home(),
       Inbox(),
-      Container(
-        alignment: Alignment.center,
-        child: Text(
-          "Settings",
-          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
-        ),
-      ),
+      Container(),
       Request(),
-       Profile(),
-      
-     
+      Profile(),
     ];
     return IndexedStack(
       index: _currentIndex,
