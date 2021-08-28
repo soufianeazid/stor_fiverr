@@ -21,6 +21,7 @@ class Style {
   static final Color bpdy = Color(0xFF717171);
   static final Color c4 = Color(0xFFC4C4C4);
   static final Color purpel = Color(0xFFBF5AF2);
+  static final Color gry12 = Color(0xFFF3F6F8);
 
   static final Color grey = Colors.grey.withOpacity(0.6);
 

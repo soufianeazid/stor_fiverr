@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/screens/pages/all_video_adverts.dart';
 import 'package:flutter_stor/screens/pages/edit%20_profile.dart';
+import 'package:flutter_stor/screens/pages/notification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/screens/pages/setting_screen.dart';
 import 'package:flutter_stor/widgets/container_dyal_profil.dart';
@@ -59,7 +60,12 @@ class _ProfileState extends State<Profile> {
                               size: 30.sp,
                             )),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Notifications()));
+                            },
                             icon: Icon(
                               Icons.notifications_none,
                               color:

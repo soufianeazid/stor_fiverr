@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/provider_setup.dart';
 import 'package:flutter_stor/screens/pages/my_home_page.dart';
 import 'package:flutter_stor/util/save.dart';
-import 'package:flutter_stor/widgets/video_player.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_preview/device_preview.dart';
+// ignore: unused_import
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,

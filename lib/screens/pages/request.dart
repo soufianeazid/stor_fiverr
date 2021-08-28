@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
+import 'package:flutter_stor/screens/pages/notification.dart';
 import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/util/style.dart';
 import 'package:provider/provider.dart';
@@ -57,7 +58,12 @@ class _RequestState extends State<Request> {
                               size: 30.sp,
                             )),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Notifications()));
+                            },
                             icon: Icon(
                               Icons.notifications_none,
                               color:

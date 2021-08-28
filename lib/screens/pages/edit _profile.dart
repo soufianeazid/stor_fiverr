@@ -127,6 +127,7 @@ class _EditProfilState extends State<EditProfil> {
   }
 }
 
+// ignore: must_be_immutable
 class EditTextFiled extends StatelessWidget {
   IconData? icon;
   String? text = "";
@@ -162,6 +163,7 @@ class EditTextFiled extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class CustomTextArea extends StatelessWidget {
   String? text = "";
   CustomTextArea({Key? key, this.text}) : super(key: key);
