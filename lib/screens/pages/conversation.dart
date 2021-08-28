@@ -194,7 +194,7 @@ class _ConverState extends State<Conver> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 23.w),
+                padding: EdgeInsets.only(left: 23.w,right: 23.w,bottom: 23.h),
                 child: Container(
                   width: double.infinity,
                   height: 47.h,
