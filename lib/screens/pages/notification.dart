@@ -233,7 +233,7 @@ class SampelNotif extends StatelessWidget {
                         Text(
                           'Ella Mianairuia Likedyour video advert.',
                           //overflow: TextOverflow.clip,
-                          maxLines: 1,
+                          maxLines: 2,
                           softWrap: true,
                           style: provider.mymode ? Style.g2 : Style.g1,
                         ),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
-import 'package:flutter_stor/screens/pages/notification.dart';
-import 'package:flutter_stor/screens/pages/search.dart';
 import 'package:flutter_stor/widgets/categori_button.dart';
 import 'package:flutter_stor/widgets/custom_app_bar.dart';
 import 'package:flutter_stor/widgets/grid_viwe_cuntent.dart';
@@ -133,8 +131,8 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 22.w),
                   child: Container(
-                    height: 2000,
-                    width: double.infinity,
+                    height: 2000.h,
+                    width: double.infinity.w,
                     child: StaggeredGridView.countBuilder(
                       physics: const NeverScrollableScrollPhysics(),
                       crossAxisCount: 4,
@@ -152,7 +150,9 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-                SizedBox(height: 150.h,)
+                SizedBox(
+                  height: 150.h,
+                )
               ],
             ),
           ),
