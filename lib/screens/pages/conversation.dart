@@ -80,10 +80,14 @@ class _ConverState extends State<Conver> {
                 height: 30.h,
                 width: 30.w,
                 decoration: BoxDecoration(
-                    color: Style.whiteColor,
-                    borderRadius: BorderRadius.circular(4.r),
-                    ),
-                    child: Icon(Icons.call_outlined,color: Style.blackColor,size: 25.sp,),
+                  color: Style.whiteColor,
+                  borderRadius: BorderRadius.circular(4.r),
+                ),
+                child: Icon(
+                  Icons.call_outlined,
+                  color: Style.blackColor,
+                  size: 25.sp,
+                ),
               ),
             ),
           ),
@@ -163,7 +167,7 @@ class _ConverState extends State<Conver> {
                                 )
                               : message.image != null
                                   ? Padding(
-                                      padding:isme
+                                      padding: isme
                                           ? EdgeInsets.only(right: 20)
                                           : EdgeInsets.only(left: 20),
                                       child: Image.asset(
@@ -194,7 +198,7 @@ class _ConverState extends State<Conver> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.only(left: 23.w,right: 23.w,bottom: 23.h),
+                padding: EdgeInsets.only(left: 23.w, right: 23.w, bottom: 23.h),
                 child: Container(
                   width: double.infinity,
                   height: 47.h,
