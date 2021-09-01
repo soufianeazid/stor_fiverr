@@ -34,71 +34,112 @@ class _ConversationState extends State<Conversation> {
   @override
   Widget build(BuildContext context) {
     var provider = context.watch<Themeprov>();
-    return ListTile(
-    
-      leading: Stack(
-        children: [
-          Image.asset(
-            widget.image!,
-          ),
-          Positioned(
-            top: 3,
-            right: 1,
-            child: Container(
-              height: 10.h,
-              width: 10.w,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Style.green2,
-                  border: Border.all(color: Style.whiteColor)),
-            ),
-          )
-        ],
-      ),
-      title: Row(
-        children: [
-          Text(
-            widget.name!,
-            style: provider.mymode
-                ? Style.listExpandedstyledark
-                : Style.listExpandedstyle,
-          ),
-          SizedBox(
-            width: 10.w,
-          ),
-          Row(
+    return Padding(
+      padding: EdgeInsets.only(top: 10.h),
+      child: Container(
+          height: 65.h,
+          //width: double.infinity,
+          child: Row(
+
+             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                widget.verfy!,
-                style: Style.pinki,
+              Stack(
+                children: [
+                  Container(
+                    child: Image.asset(
+                      widget.image!,
+                    ),
+                  ),
+                  Positioned(
+                    top: 1.h,
+                    right: 1.w,
+                    child: Container(
+                      height: 13.h,
+                      width: 13.w,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Style.green2,
+                          border: Border.all(color: Style.whiteColor)),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
-                width: 5.w,
+                width: 15.w,
               ),
-             Icon(widget.imagev,color: Style.primaryColor,size: 17.sp,)
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.name!,
+                        style: provider.mymode
+                            ? Style.listExpandedstyledark
+                            : Style.listExpandedstyle,
+                      ),
+                      SizedBox(
+                        width: 5.w,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            widget.verfy!,
+                            style: Style.pinki,
+                          ),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          Icon(
+                            widget.imagev,
+                            color: Style.primaryColor,
+                            size: 17.sp,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.start,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        widget.message!,
+                        style: provider.mymode ? Style.whiti : Style.gry,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+             SizedBox(
+               width: 70.w,
+             ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SizedBox(height: 10.h,),
+                  Text(
+                    widget.date!,
+                    style: provider.mymode ? Style.whiti : Style.gry,
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  Container(
+                    height: 10.h,
+                    width: 10.w,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Style.primaryColor),
+                  ),
+                ],
+              )
             ],
-          )
-        ],
-      ),
-      subtitle: Text(
-        widget.message!,
-        style: provider.mymode ? Style.whiti : Style.gry,
-      ),
-      trailing: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            widget.date!,
-            style: provider.mymode ? Style.whiti : Style.gry,
-          ),
-          Container(
-            height: 10.h,
-            width: 10.w,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Style.primaryColor),
-          )
-        ],
-      ),
+          )),
     );
   }
 }

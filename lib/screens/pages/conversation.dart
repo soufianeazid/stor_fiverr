@@ -186,15 +186,12 @@ class _ConverState extends State<Conver> {
                                 : Style.whiteButtonText,
                           ),
                         ),
+                        //Replay(),
                       ],
                     );
                   }),
             ),
-            Positioned(
-              bottom: 120,
-              left: 0,
-              child: Replay(),
-            ),
+            
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(

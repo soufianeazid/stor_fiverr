@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stor/core/provider/theme_provider.dart';
 import 'package:flutter_stor/util/style.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:video_player/video_player.dart';
 import 'package:provider/provider.dart';
 
@@ -174,8 +175,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                 children: [
                   Text('Used Misfit Watch For Man',
                       style: provider.mymode
-                          ?Style.headingTextDark1
-                          :  Style.buttonText2),
+                          ? Style.headingTextDark1
+                          : Style.buttonText2),
                   SizedBox(
                     height: 7.h,
                   ),
@@ -224,7 +225,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                         padding: EdgeInsets.only(right: 15.w),
                         child: Text(
                           'Clothing & Beauty',
-                          style: provider.mymode ?Style.whiti  : Style.hinttext,
+                          style: provider.mymode ? Style.whiti : Style.hinttext,
                         ),
                       ),
                     ],
@@ -267,24 +268,26 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
               child: Row(
                 children: [
                   InkWell(
-                      onTap: () {},
-                      child: Image.asset(provider.mymode
-                          ? 'assets/icon/heart (3) 1.png'
-                          :'assets/icon/heart _.png' )),
+                  onTap: (){},
+                    child: Icon(
+                      Icons.favorite_border_outlined,
+                      color: Style.primaryColor,
+                      size: 25.sp,
+                    ),
+                  ),
                   SizedBox(
                     width: 14.w,
                   ),
                   InkWell(
-                    onTap: () {},
-                    child: Image.asset(provider.mymode
-                        ? 'assets/icon/messenger.png'
-                        : 'assets/icon/Vector-5.png'),
-                  ),
+                     onTap: (){},
+                    child: FaIcon(
+                      FontAwesomeIcons.commentDots,
+                      color: Style.primaryColor,
+                      size: 25.sp,
+                    ),
+                  )
                 ],
               ),
-            ),
-            SizedBox(
-              height: 10.h,
             ),
             Center(
                 child: TextButton(
@@ -303,7 +306,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     borderRadius: BorderRadius.circular(10.r),
                     border: Border.all(
                       color:
-                          provider.mymode ?Style.whiteColor  : Style.grey4Color,
+                          provider.mymode ? Style.whiteColor : Style.grey4Color,
                     ),
                   ),
                   child: TextButton(
@@ -356,3 +359,4 @@ Widget wlidat(String image, text) {
     ),
   );
 }
+
